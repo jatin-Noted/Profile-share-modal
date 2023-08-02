@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4b25b8d89d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <div class="circle-red"></div>
+        <div class="circle-violet"></div>
+
+        <div class="card-container">
+            <img src="./Assets/WhatsApp Image 2023-07-16 at 08.53.41.jpg" alt="rel" loading="lazy">
+            <h2 class="user-name">Jatin Singh</h2>
+            <p class="goal">Web Developer and Coder</p>
+            <div class="bttn-grp">
+                <button class="btn-share bttn" onclick="openModal()"><i class="fa-solid fa-share fa-bounce"></i> Share my Profile</button>
+                <button class="btn-follow bttn">Follow me on <i class="fa-solid fa-user fa-bounce"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Component -->
+    <div class="modal">
+        <div class="modal-header-section">
+            <h1 class="modal-header">Share my Profile</h1>
+            <i class="fa-solid fa-xmark close fa-bounce close" onclick="closeModal()"></i>
+        </div>
+        <div class="links-section">
+            <h3>Share this via</h3>
+            <div class="icon-container">
+                <a href="#" class="icon" id="facebook">
+                    <i class="fa-brands fa-facebook-f fa-bounce"></i>
+                  </a>
+                  <a href="#" class="icon" id="twitter">
+                    <i class="fa-brands fa-twitter fa-bounce"></i>
+                  </a>
+                  <a href="#" class="icon" id="instagram">
+                    <i class="fa-brands fa-instagram fa-bounce"></i>
+                  </a>
+                  <a href="#" class="icon" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp fa-bounce"></i>
+                  </a>
+                  <a href="#" class="icon" id="telegram">
+                    <i class="fa-brands fa-telegram fa-bounce"></i>
+                  </a>
+                  <a href="#" class="icon" id="linkedin">
+                    <i class="fa-brands fa-linkedin fa-bounce"></i>
+                  </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---- Overlay -->
+    <div class="overlay" onclick="closeModal()"></div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

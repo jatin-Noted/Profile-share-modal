@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-red {
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    box-shadow: 0 0 50px #d84869;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    animation: circleRedAnimation 15s infinite;
+}
+
+@keyframes circleRedAnimation {
+    50% {
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+    }
+}
+
+.circle-violet {
+    width: 19em;
+    height: 19em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circleVioletAnimation 8s infinite;
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+}
+
+@keyframes circleVioletAnimation {
+    50% {
+        bottom: 6%;
+        right: 31%;
+    }
+}
+
+.card-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 450px;
+    width: 350px;
+    border: 2px solid #ffffff30;
+    color: white;
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+}
+
+.card-container img {
+    height: 170px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #ffffff30;
+}
+
+.user-name {
+    font-size: 2rem;
+}
+
+.goal {
+    font-size: 1.3rem;
+}
+
+.bttn-grp {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+}
+
+.btn-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+}
+
+.bttn {
+    font-weight: 600;
+}
+
+.bttn:hover {
+    background: white;
+    color: black;
+}
+
+
+
+.modal-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.icon-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    border: 1px solid #ffffff88;
+    padding: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    transition: all 0.5s;
+}
+
+.icon i {
+    font-size: 27px;
+}
+
+#facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+
+#facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+}
+
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+
+#twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+}
+
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+
+#instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+}
+
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+
+#whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+}
+
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+
+#telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+}
+
+#linkedin {
+    color: #055a85;
+    border: 1px solid #055a85;
+}
+
+#linkedin:hover {
+    background-color: #055a85;
+    color: #fff;
+}
+
+.modal {
+    width: 500px;
+    color: white;
+    padding: 20px 25px;
+    border: 2px solid #ffffff59;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    scale: 0;
+    background: black;
+}
+
+.active {
+    scale: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease-in-out;
+
+    pointer-events: none;
+}
+
+.overlayactive {
+    opacity: 1;
+
+    pointer-events: initial;
+}
